@@ -45,6 +45,14 @@ charts.forEach(function (chart) {
 //     $(table).DataTable();
 //   });
 // });
+// $(document).ready(function() {
+//     $('#example').DataTable();
+// } );
 $(document).ready(function() {
-    $('#example').DataTable();
+  $('#example').DataTable( {
+      dom: 'Bfrtip',
+      buttons: [
+          'copy', 'csv', 'excel', 'pdf', 'print'
+      ]
+  } );
 } );

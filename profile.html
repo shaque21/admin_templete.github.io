@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="css/dataTables.bootstrap5.min.css" />
+    <link rel="stylesheet" href="css/buttons.dataTables.min.css">
+
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Bootstrap 5 Admin Dashboard Template</title>
+  </head>
+  <body>
+
+
+    <!-- top navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#sidebar"
+          aria-controls="offcanvasExample"
+        >
+          <span class="navbar-toggler-icon d-flex justify-content-center align-items-center" data-bs-target="#sidebar">
+            <i class="bi bi-justify text-white" data-bs-target="#sidebar"></i>
+          </span>
+        </button>
+        <a
+          class="navbar-brand me-auto ms-lg-0 ms-3 text-uppercase fw-bold"
+          href="#"
+          >Samsul Haque</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#topNavBar"
+          aria-controls="topNavBar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="three-dot navbar-toggler-icon d-flex justify-content-center align-items-center"><i class="bi bi-three-dots-vertical text-white"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="topNavBar">
+
+          
+          <form class="d-flex ms-auto my-3 my-lg-0">
+            <div class="input-group">
+              <input
+                class="form-control"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-primary" type="submit">
+                <i class="bi bi-search"></i>
+              </button>
+            </div>
+          </form>
+
+
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle ms-2"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="bi bi-person-fill"></i>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="#"><i class="bi bi-person fw-bolder text-primary"></i> Profile</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li class="my-2"><hr class="dropdown-divider bg-dark" /></li>
+                <li>
+                  <a class="dropdown-item text-danger" href="#"><i class="bi bi-power fw-bolder"></i> Log out</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+
+        </div>
+      </div>
+    </nav>
+    <!-- top navigation bar -->
+
+
+
+    <!-- offcanvas -->
+    <div
+      class="offcanvas offcanvas-start sidebar-nav bg-dark"
+      tabindex="-1"
+      id="sidebar"
+    >
+      <div class="offcanvas-body p-0">
+        <nav class="navbar-dark">
+          <ul class="navbar-nav">
+            <li>
+              <div class="text-muted small fw-bold text-uppercase px-3">
+                CORE
+              </div>
+            </li>
+            <li>
+              <a href="#" class="nav-link px-3 active">
+                <span class="me-2"><i class="bi bi-speedometer2"></i></span>
+                <span>Dashboard</span>
+              </a>
+            </li>
+            <li class="my-4"><hr class="dropdown-divider bg-light" /></li>
+            <li>
+              <div class="text-muted small fw-bold text-uppercase px-3 mb-3">
+                Interface
+              </div>
+            </li>
+            <li>
+              <a
+                class="nav-link px-3 sidebar-link"
+                data-bs-toggle="collapse"
+                href="#layouts"
+              >
+                <span class="me-2"><i class="bi bi-layout-split"></i></span>
+                <span>Layouts</span>
+                <span class="ms-auto">
+                  <span class="right-icon">
+                    <i class="bi bi-chevron-down"></i>
+                  </span>
+                </span>
+              </a>
+              <div class="collapse" id="layouts">
+                <ul class="navbar-nav ps-3">
+                  <li>
+                    <a href="#" class="nav-link px-3">
+                      <span class="me-2">
+                        <i class="bi bi-dot"></i>
+                      </span>
+                      <span>sub-menu</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link px-3">
+                      <span class="me-2">
+                        <i class="bi bi-dot"></i>
+                      </span>
+                      <span>sub-menu</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link px-3">
+                      <span class="me-2">
+                        <i class="bi bi-dot"></i>
+                      </span>
+                      <span>sub-menu</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="#" class="nav-link px-3">
+                <span class="me-2"><i class="bi bi-book-fill"></i></span>
+                <span>Pages</span>
+              </a>
+            </li>
+            <li class="my-4"><hr class="dropdown-divider bg-light" /></li>
+            <li>
+              <div class="text-muted small fw-bold text-uppercase px-3 mb-3">
+                Addons
+              </div>
+            </li>
+            <li>
+              <a href="#" class="nav-link px-3">
+                <span class="me-2"><i class="bi bi-graph-up"></i></span>
+                <span>Charts</span>
+              </a>
+            </li>
+            <li>
+              <a
+                class="nav-link px-3 sidebar-link"
+                data-bs-toggle="collapse"
+                href="#table"
+              >
+                <span class="me-2"><i class="bi bi-table"></i></span>
+                <span>Tables</span>
+                <span class="ms-auto">
+                  <span class="right-icon">
+                    <i class="bi bi-chevron-down"></i>
+                  </span>
+                </span>
+              </a>
+              <div class="collapse" id="table">
+                <ul class="navbar-nav ps-3">
+                  <li>
+                    <a href="tables/basicTable.html" class="nav-link px-3">
+                      <span class="me-2">
+                        <i class="bi bi-dot"></i>
+                      </span>
+                      <span>Basic Table</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="tables/dataTable.html" class="nav-link px-3">
+                      <span class="me-2">
+                        <i class="bi bi-dot"></i>
+                      </span>
+                      <span>Data Table</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <!-- offcanvas -->
+
+
+
+    <!-- Main contents -->
+    <main class="mt-5 pt-3">
+      <div class="container-fluid">
+
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="alert alert-secondary" role="alert">
+              <h4>User Profile</h4>
+            </div>
+          </div>
+        </div>
+
+        <!-- main profile section -->
+        <div class="row">
+          <!-- profile picture section -->
+
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-header profile-header">
+
+              </div>
+              <div class="card-body profile-body">
+
+                <div class="profile-picture">
+                  <img src="images/profile.png" alt="" height="100%" width="100%">
+                </div>
+
+                <div class="profile-text d-flex justify-content-center align-items-center flex-column">
+                  <h4 class="text-primary">Samsul Haque</h4>
+                  <p>Frontend Web Developer</p>
+                </div>
+
+                <div class="social-media-icon d-flex justify-content-center align-items-center">
+                  <a href="#" class="me-3"><i class="bi bi-facebook"></i></a>
+                  <a href="#" class="me-3"><i class="bi bi-linkedin"></i></a>
+                  <a href="#" class="me-3"><i class="bi bi-google"></i></a>
+                  <a href="#" class="me-3"><i class="bi bi-github"></i></a>
+                </div>
+              </div>
+              <div class="card-footer">
+                <div class="d-grid gap-2">
+                  <a href="#" class="btn btn-primary">Update Profile</a>
+                </div>
+              </div>
+          </div>
+          </div>
+
+          <!-- profile picture section -->
+
+          <!-- profile information section -->
+
+          <div class="col-md-8 profile-information">
+            <div class="card">
+                <div class="card-header info-header d-flex align-items-center">
+                  <p class="text-primary">Profile Information</p>
+                </div>
+                <div class="card-body">
+                  <div class="row mt-3">
+                      <div class="col-md-6">
+                        <form class="form-floating">
+                          <input type="email" readonly class="form-control" id="floatingInputValue" placeholder="name@example.com" value="Samsul Haque">
+                          <label for="floatingInputValue">Name</label>
+                        </form>
+                      </div>
+                      <div class="col-md-6">
+                        <form class="form-floating">
+                          <input type="email" readonly class="form-control" id="floatingInputValue" placeholder="name@example.com" value="hshamsul894@gmail.com">
+                          <label for="floatingInputValue">Email</label>
+                        </form>
+                      </div>
+                  </div>
+                  <hr class="dropdown-divider bg-dark my-3" />
+                  <div class="row mt-3">
+                    <div class="col-md-4">
+                      <form class="form-floating">
+                        <input type="email" readonly class="form-control" id="floatingInputValue" placeholder="name@example.com" value="+88 01627-309821">
+                        <label for="floatingInputValue">Phone</label>
+                      </form>
+                    </div>
+                    <div class="col-md-4">
+                      <form class="form-floating">
+                        <input type="email" readonly class="form-control" id="floatingInputValue" placeholder="name@example.com" value="1994 Dec 16">
+                        <label for="floatingInputValue">Date Of Birth</label>
+                      </form>
+                    </div>
+                    <div class="col-md-4">
+                      <form class="form-floating">
+                        <input type="email" readonly class="form-control" id="floatingInputValue" placeholder="name@example.com" value="2021 Aug 31 | 10:17:12 PM">
+                        <label for="floatingInputValue">Account Create Time</label>
+                      </form>
+                    </div>
+                  </div>
+                  <hr class="dropdown-divider bg-dark my-3" />
+                  <div class="row ">
+                    <div class="col-md-12">
+                      <div class="card-body">
+                        <form class="form-floating">
+                          <input type="email" readonly class="form-control" id="floatingInputValue" placeholder="name@example.com" value="20/1, Rajoni Bose Lane, Mitford, Dhaka">
+                          <label for="floatingInputValue">House Address</label>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- profile information section -->
+        </div>
+        <!-- main profile section -->
+
+
+      </div>
+    </main>
+    <!-- Main contents -->
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.2/dist/chart.min.js"></script>
+    <script src="js/jquery-3.5.1.js"></script>
+    <script src="js/jquery.dataTables.min.js"></script>
+    <script src="js/dataTables.bootstrap5.min.js"></script>
+    <script src="js/dataTables.buttons.min.js"></script>
+    <script src="js/jszip.min.js"></script>
+    <script src="js/pdfmake.min.js"></script>
+    <script src="js/vfs_fonts.js"></script>
+    <script src="js/buttons.html5.min.js"></script>
+    <script src="js/buttons.print.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
